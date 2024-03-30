@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eye Diseases Detection</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/static/main.js" type="text/javascript"></script>
+    <!-- Include any other necessary CSS or JavaScript files -->
+    <style>
+        .bg-dark {
+            background-color: #b8c4eb!important;
+            background-repeat: no-repeat;
+        }
+        #result {
+            color: #ffffff;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color : rgb(14, 13, 13);">
+            A Novel Deep Learning Approach for Classification of Eye Diseases using Fundus Images
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+		<div class="container">
+		  <div class="row">
+			<div class="col-sm-6 bd">
+			  <h3 style="color : rgb(15, 14, 14);">
+                Classification of Eye diseases (Diabetic Retinopathy,Gluacoma,Cataract): 
+              </h3>
+			  <br>
+			  <p style="color : rgb(21, 20, 20);">
+                <b>Eye Disease Classification (EDC)</b> model solutions using the fundus images, helps in identifying the eye diseases at the early stages for treatment. 
+                EDC model arises from the diverse challenges due to eye diseases which is impacting individual’s well being and quality of life.<br>
+                <br>To address this issue, a model is proposed utilizing latest <b>Deep Learning</b> techniques on EDC datasets. 
+	            Thus this project contributes to the improvement of existing EDC models, providing the way for more accurate and comprehensive classification of eye diseases over a locality.
+                <br>
+              </p><br>      
+			</div>
+			<div class="col-sm-6">
+				<div>
+					<h4 style="color : rgb(10, 10, 10);">Upload image here to classify the disease</h4><br>
+			<form action = "http://localhost:5000/" id="upload-file" method="post" enctype="multipart/form-data">
+				<input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
+			</form>
+			
+
+			<div class="image-section" style="display:none;">
+				<div class="img-preview">
+					<div id="imagePreview">
+					</div>
+				</div>
+				<div>
+					<button type="button" class="btn btn-success" id="btn-predict">Predict!</button>
+				</div>
+			</div>
+
+			<div class="loader" style="display:none;"></div>
+
+			<h3>
+				<span id="result"> </span>
+			</h3>
+
+		</div>
+			</div>
+			 
+		  </div>
+		</div>
+		</div>
+    </div>
+</body>
+
+</html>
